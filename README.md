@@ -1,4 +1,4 @@
-G.Auto_Farm = true -- true / false
+_G.Auto_Farm = true -- true / false
 
 function totarget(p)
     local Distance2 = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -29,7 +29,7 @@ function checklevel()
         CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
         CFrameMon = CFrame.new(-1479.76099, 23.195364, 106.327942, 0.96289885, 5.22265786e-10, -0.269862473, 6.59528099e-10, 1, 4.28857172e-09, 0.269862473, -4.30744285e-09, 0.96289885)
         CFramePuk = CFrame.new(-1776.32959, 61.1782455, 66.8902054, -0.912609756, -2.38546143e-08, 0.408831745, -2.14773621e-08, 1, 1.04056577e-08, -0.408831745, 7.15677129e-10, -0.912609756)
-        elseif lv == 15 or lv <= 29 then
+        elseif lv == 15 or lv <= 209 then
         Mon = "Gorilla [Lv. 20]"
         Title = "Gorilla"
         QuestName = "JungleQuest"
