@@ -1,4 +1,4 @@
-_G.Auto_Farm = true -- true / false
+if _G.Auto_Farm then -- true / false
 
 function totarget(p)
     local Distance2 = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -40,7 +40,7 @@ function checklevel()
 		elseif lv == 30 or lv <= 39 then
         Mon = "Pirate [Lv. 35]"
         Title = "Pirate"
-        QuestName = "JungleQuest"
+        QuestName = "BuggyQuest1"
         QuestNumber = 1
         CFrameQuest = CFrame.new(-1601.6553955078, 36.85213470459, 153.38809204102)
         CFrameMon = CFrame.new(-1142.6488037109, 40.462348937988, -515.39227294922)
@@ -430,3 +430,25 @@ game.Players.LocalPlayer.CharacterAdded:Connect(function(Chr)
     Chr.ChildAdded:Connect(DestroyBusy)
     OnChar(Chr)
 end)
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "Mercury",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
+local Tab = GUI:Tab{
+	Name = "New Tab",
+	Icon = "rbxassetid://8569322835"
+}
+Tab:Toggle{
+	Name = "Toggle",
+	StartingState = false,
+	Description = nil,
+	Callback = function(value) 
+	_G.Auto_Farm = value
+	end
+}
